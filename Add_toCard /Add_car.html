@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <style>
+        #h1 {
+            text-align: center;
+            color: #370e59;
+            font-size: 2em;
+            margin-top: 20px;
+        }
+
+        .newProd {
+           
+            padding: 10px 20px;
+            align-self: center;
+            background-color: #292d9f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: auto;
+
+
+        }
+
+        .newProd:hover {
+            background-color: #45a049;
+        }
+
+        #See_list {
+            width: 300px;
+            border: 2px solid black;
+            padding: 20px;
+            background-color: antiquewhite;
+            position: sticky;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #List_form {
+            width: 300px;
+            border: 2px solid black;
+            padding: 20px;
+            background-color: antiquewhite;
+            /* position: sticky; */
+            left: 50%;
+
+        }
+
+        #List_form input {
+            width: 80%;
+            display: flex;
+            padding: 4px;
+            margin-top: 6px;
+            margin-bottom: 6px;
+            border: 1px solid black;
+            border-radius: 4px;
+
+        }
+
+        #List_form button {
+            width: 30%;
+            padding: 4px;
+            margin-top: 6px;
+
+            border: 1px solid black;
+            border-radius: 4px;
+            background-color: lightblue;
+        }
+
+        #prodcar {
+            margin-top: 70px;
+
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+
+        }
+
+
+        #prodcar h3 {
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        #prodcar p {
+            text-align: center;
+            font-size: 1em;
+            color: #555;
+        }
+
+        #prodcar div {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        #prodcar div:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #prodcar div button {
+            margin-top: 10px;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: #370e59;
+            color: white;
+            cursor: pointer;
+            gap: 10px;
+        }
+
+        #prodcar div button:hover {
+            background-color: #218838;
+        }
+
+        header {
+            background-color: #1d1d1d;
+            color: white;
+
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #218838;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .dropdown-menu {
+            background-color: #1d1d1d;
+            border: none;
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="nav">
+            <h2 class="logo"> Az website</h2>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                
+                <li><a href="../Local_Storage/userdasboard.html">User Dashboard</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Stores
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Add_to_card.html">Bike</a></li>
+                        <li><a href="Add_car.html">Car</a></li>
+                        <li><a href="Add_cycle.html">Cycle</a></li>
+                    </ul>
+
+        </nav>
+    </header>
+   
+    <button class="newProd" onclick="newlistings()" style="margin-top: 30px;">Add products</button>
+    <!-- <a href="../Local_Storage/userdasboard.html">User Profile</a> -->
+    <div id="List_form">
+        id: <input id="id" type="text" placeholder="enter id">
+        image: <input id="img" type="text" placeholder="Enter image link">
+        price : <input id="price" type="text" placeholder="enter your price">
+        <button onclick="addlist()">Add</button>
+    </div>
+
+    <br>
+
+    <div id="prodcar">
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <script type="module" src="carprod.js"></script>
+</body>
+</html>

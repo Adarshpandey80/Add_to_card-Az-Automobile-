@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            background-image: url("https://media.istockphoto.com/id/1471521270/photo/a-female-hand-and-a-shopping-cart-icon-concept-of-starting-a-sale-online-shopping-increasing.jpg?s=612x612&w=0&k=20&c=cxRKLCrn4mNrZlnsc7m5ANBB0pRfB3YaBsfHkuj8HAg=");
+            background-size: cover;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        #data {
+            max-width: 400px;
+            height: auto;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #151313;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            opacity: 0.9;
+            color: white;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #btn {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <h1>Welcome to dashboard</h1>
+    <div id="data"></div>
+    <input type="submit" value="LOGOUT" onclick="logout()">
+    <input type="submit" value="UPDATE" onclick="window.location.href = 'update.html'" id='btn'>
+     
+
+    <script>
+      
+        let islogin = JSON.parse(localStorage.getItem("islogin"))
+        if(islogin){
+             let data = document.getElementById("data")
+        data.innerHTML = `
+        <h1> Name:${islogin.name}</h1>
+        <h2> Email:${islogin.email}</h2>
+        <h3> Mobile:${islogin.mobile}</h3>
+        <h3>Password:${islogin.password}</h3>
+      
+        `
+        
+        } else {
+            data.innerHTML = "<h1>Please Login</h1>"
+        }
+       
+        const logout = () => {
+            localStorage.removeItem("islogin")
+            window.location.href = "login.html"
+            let btn = document.querySelectorAll("#bnt")
+            btn.forEach((e)=>{
+                e.style.display = "none"
+            })
+        }
+        
+
+       
+
+    </script>
+</body>
+
+</html>

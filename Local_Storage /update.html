@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is update page</h1>
+
+   <form action="" id="updateuser">
+        name: <input type="text" id="name"> <br>
+        email: <input type="text" id="email" > <br>
+        mobile: <input type="number" id="mobile"> <br>
+        password: <input type="text" id="password"> <br>
+        <input type="submit" value="UPDATE">
+
+    </form>
+
+
+    <script>
+         
+        let islogin= JSON.parse(localStorage.getItem("islogin"))
+        console.log(islogin)
+        let user = JSON.parse(localStorage.getItem("user")  || '[]')
+        console.log(user)
+        document.getElementById("name").value = islogin.name;
+        document.getElementById("email").value = islogin.email;
+        document.getElementById("mobile").value = islogin.mobile;
+        document.getElementById("password").value = islogin.password;
+
+     document.getElementById("updateuser").addEventListener("submit",(e)=>{
+        e.preventDefault();
+        let updatedata={
+            name: document.getElementById("name").value ,
+            email: document.getElementById("email").value ,
+            mobile: document.getElementById("mobile").value,
+            password:  document.getElementById("password").value ,
+        }
+       
+       user = user.map((u)=>{
+       
+            if(islogin.email===u.email){
+               return updatedata;
+            }
+            return u;
+        })
+        console.log(updatedata)
+       
+        localStorage.setItem("islogin",JSON.stringify(updatedata))
+         localStorage.setItem("user",JSON.stringify(user))
+        window.location.href = "userdasboard.html";
+        console.log(updatedata)
+       
+        
+     })
+    </script>
+</body>
+</html>

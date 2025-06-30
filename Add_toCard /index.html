@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        /* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Introduction Section */
+.intro-section {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.intro-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.intro-section p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #c0392b;
+}
+
+/* About Section */
+.about-section {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.about-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.about-card {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-card h3 {
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    line-height: 1.6;
+}
+
+/* What I Sell Section */
+.products-section {
+    background-color: #f5f5f5;
+    padding: 60px 20px;
+}
+
+.products-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+.products-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 350px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+.product-features {
+    color: #34495e;
+    padding-left: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .intro-section h1 {
+        font-size: 2rem;
+    }
+    
+    .intro-section p {
+        font-size: 1rem;
+    }
+    
+    .about-card {
+        min-width: 100%;
+    }
+    
+    .product-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+         header {
+            background-color: #1d1d1d;
+            color: white;
+
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            padding: 1rem ;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #218838;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .dropdown-menu {
+            background-color: #1d1d1d;
+            border: none;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+      <header>
+        <nav id="nav">
+            <h2 class="logo"> Az website</h2>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="../Local_Storage/registation.html">Register</a></li>
+                <li><a href="../Local_Storage /login.html">login</a></li>
+                
+        </nav>
+    </header>
+      <!-- Introduction Section -->
+    <section class="intro-section">
+        <h1>Welcome to Az </h1>
+        <p>
+            Your premier destination for quality vehicles. We offer the best selection of cars, bikes, and cycles to match your lifestyle and budget.
+        </p>
+        <a href="#what-i-sell" class="cta-button">Explore Our Collection</a>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <h2>About WheelsHub</h2>
+        <div class="about-container">
+            <div class="about-card">
+                <h3>Our Story</h3>
+                <p>
+                    Founded in 2010, WheelsHub started as a small family business with a passion for vehicles. Over the years, we've grown into one of the most trusted names in the automotive and cycling industry.
+                </p>
+            </div>
+            <div class="about-card">
+                <h3>Our Mission</h3>
+                <p>
+                    To provide high-quality vehicles at competitive prices while delivering exceptional customer service. We believe everyone deserves reliable transportation that fits their needs.
+                </p>
+            </div>
+            <div class="about-card">
+                <h3>Why Choose Us</h3>
+                <p>
+                    - 10+ years of experience<br>
+                    - Verified quality vehicles<br>
+                    - Competitive pricing<br>
+                    - Excellent after-sales support<br>
+                    - Flexible financing options
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What I Sell Section -->
+    <section id="what-i-sell" class="products-section">
+        <h2>What We Sell</h2>
+        <div class="products-container">
+            <!-- Cars -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Cars">
+                </div>
+                <div class="product-info">
+                    <h3>Cars</h3>
+                    <p class="product-description">
+                        From luxury sedans to family SUVs, we have a wide selection of new and pre-owned vehicles.
+                    </p>
+                    <ul class="product-features">
+                        <li>Sedans</li>
+                        <li>SUVs</li>
+                        <li>Sports Cars</li>
+                        <li>Electric Vehicles</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Bikes -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Bikes">
+                </div>
+                <div class="product-info">
+                    <h3>Bikes</h3>
+                    <p class="product-description">
+                        High-performance motorcycles for every riding style and experience level.
+                    </p>
+                    <ul class="product-features">
+                        <li>Sport Bikes</li>
+                        <li>Cruisers</li>
+                        <li>Touring Bikes</li>
+                        <li>Scooters</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Cycles -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Cycles">
+                </div>
+                <div class="product-info">
+                    <h3>Cycles</h3>
+                    <p class="product-description">
+                        Quality bicycles for commuting, fitness, and adventure.
+                    </p>
+                    <ul class="product-features">
+                        <li>Mountain Bikes</li>
+                        <li>Road Bikes</li>
+                        <li>Hybrid Bikes</li>
+                        <li>Electric Bikes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
