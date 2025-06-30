@@ -54,6 +54,8 @@
     <div id="data"></div>
     <input type="submit" value="LOGOUT" onclick="logout()">
     <input type="submit" value="UPDATE" onclick="window.location.href = 'update.html'" id='btn'>
+    <input type="submit" value="HOME" onclick="window.location.href = '../Add_toCard /home.html'" id='btn'>
+
      
 
     <script>
@@ -75,7 +77,7 @@
        
         const logout = () => {
             localStorage.removeItem("islogin")
-            window.location.href = "login.html"
+            window.location.href = "index.html"
             let btn = document.querySelectorAll("#bnt")
             btn.forEach((e)=>{
                 e.style.display = "none"

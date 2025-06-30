@@ -4,22 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+           background-image: url("https://media.istockphoto.com/id/1471521270/photo/a-female-hand-and-a-shopping-cart-icon-concept-of-starting-a-sale-online-shopping-increasing.jpg?s=612x612&w=0&k=20&c=cxRKLCrn4mNrZlnsc7m5ANBB0pRfB3YaBsfHkuj8HAg=");
+            background-size: cover;
+        }
+        h1 {
+            text-align: center;
+            color: #2c024f;
+            font-size: 2em;
+            margin-top: 20px;
+        }
+        form {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;  
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #canel {
+            background-color: #dc3545; /* Red color for cancel button */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #dc3545; /* Red color for cancel button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #c82333;
+        }
+    </style>
 </head>
 <body>
-    <h1>This is update page</h1>
+    <h1>Update your profile</h1>
 
    <form action="" id="updateuser">
         name: <input type="text" id="name"> <br>
         email: <input type="text" id="email" > <br>
         mobile: <input type="number" id="mobile"> <br>
         password: <input type="text" id="password"> <br>
-        <input type="submit" value="UPDATE">
+        <input type="submit"  value="UPDATE"> <br> <br>
+        <button onclick="profile()">CANCEL</button>
 
     </form>
 
 
     <script>
-         
+        function profile() {
+            window.location.href = "userdasboard.html";
+            
+        }
         let islogin= JSON.parse(localStorage.getItem("islogin"))
         console.log(islogin)
         let user = JSON.parse(localStorage.getItem("user")  || '[]')

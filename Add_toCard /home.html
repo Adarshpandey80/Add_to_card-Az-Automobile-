@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <style>
        
         /* Base Styles */
@@ -223,17 +225,28 @@ h1, h2, h3 {
 <body>
       <header>
         <nav id="nav">
-            <h2 class="logo"> Az website</h2>
+            <h2 class="logo"> Az Automobiles</h2>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="../Local_Storage/registation.html">Register</a></li>
-                <li><a href="../Local_Storage /login.html">login</a></li>
+                <!-- <li><a href="../Local_Storage /registation.html">Register</a></li>
+                <li><a href="../Local_Storage /index.html">login</a></li> -->
+                 <li><a href="../Local_Storage /userdasboard.html">Profile</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Stores
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Add_to_card.html">Bike</a></li>
+                        <li><a href="Add_car.html">Car</a></li>
+                        <li><a href="Add_cycle.html">Cycle</a></li>
+                    </ul>
                 
         </nav>
     </header>
       <!-- Introduction Section -->
     <section class="intro-section">
-        <h1>Welcome to Az </h1>
+        <h1>Welcome to Az Automobiles</h1>
         <p>
             Your premier destination for quality vehicles. We offer the best selection of cars, bikes, and cycles to match your lifestyle and budget.
         </p>
@@ -247,7 +260,7 @@ h1, h2, h3 {
             <div class="about-card">
                 <h3>Our Story</h3>
                 <p>
-                    Founded in 2010, WheelsHub started as a small family business with a passion for vehicles. Over the years, we've grown into one of the most trusted names in the automotive and cycling industry.
+                    Founded in 2025, WheelsHub started as a small family business with a passion for vehicles. Over the years, we've grown into one of the most trusted names in the automotive and cycling industry.
                 </p>
             </div>
             <div class="about-card">
@@ -331,5 +344,8 @@ h1, h2, h3 {
             </div>
         </div>
     </section>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
 </body>
 </html>

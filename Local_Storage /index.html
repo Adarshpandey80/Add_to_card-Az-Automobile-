@@ -19,7 +19,7 @@
 
         h1 {
             text-align: center;
-            color: #7511bc;
+            color: #c0a322;
             font-family: Arial, sans-serif;
         }
 
@@ -71,62 +71,12 @@
             color: #218838;
         }
 
-        header {
-            background-color: #1d1d1d;
-            color: white;
-
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: auto;
-            padding: 1rem ;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav ul li a:hover {
-            color: #218838;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .dropdown-menu {
-            background-color: #1d1d1d;
-            border: none;
-            padding: 1rem;
-        }
+        
     </style>
 </head>
 
 <body>
-    <header>
-        <nav id="nav">
-            <h2 class="logo"> Az website</h2>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="registation.html">Register</a></li>
-               
-                
-
-        </nav>
-    </header>
+   
 
     <form action="" id="form">
         Email: <input type="text" id="email" required> <br>
@@ -157,7 +107,7 @@
             let founduser = user.find((e => e.email === email && e.password === password))
             if (founduser) {
                 localStorage.setItem('islogin', JSON.stringify(founduser))
-                window.location.href = "../Add_toCard/Add_to_card.html"
+                window.location.href = "../Add_toCard /home.html"
                 // window.location.href = "userdasboard.html"
             } else {
                 // alert("invalid user")
