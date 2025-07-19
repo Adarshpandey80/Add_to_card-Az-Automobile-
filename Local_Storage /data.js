@@ -10,7 +10,7 @@ const userinfo = (e)=>{
     user.push(z)
     localStorage.setItem("user",JSON.stringify(user));
     // console.log(user)
-    window.location.href = "login.html"
+    window.location.href = "../index.html"
 
 }
 document.addEventListener("DOMContentLoaded",()=>{

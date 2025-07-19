@@ -1,8 +1,6 @@
 
 import product from "./product.js";
 
-
-
 let form = document.getElementById("List_form");
 form.style.display = "none";
 
@@ -24,9 +22,6 @@ function renderProducts() {
         `;
     }).join('');
 }
-
-
-
 
 renderProducts();
 
